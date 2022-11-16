@@ -20,3 +20,17 @@
     );
   });
 })();
+
+const confirmPw = document.querySelector("#confirmPassword");
+const pw = document.querySelector("#password");
+const passwordNoMatch = document.querySelector(".password-no-match");
+
+confirmPw.addEventListener("keyup", () => {
+  if (confirmPw.value != pw.value) {
+    if (!passwordNoMatch.classList.contains("show")) {
+      passwordNoMatch.classList.add("show");
+    }
+  } else if (confirmPw.value === pw.value) {
+    passwordNoMatch.classList.remove("show");
+  }
+});

@@ -38,6 +38,19 @@
   font-family: var(--ff-primary);
 }
 
+.password-no-match {
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+  font-family: var(--ff-primary);
+}
+
+.password-no-match.show {
+  display: block;
+}
+
 .was-validated input:invalid {
   border-color: #dc3545;
   padding-right: calc(1.5em + 0.75rem);
